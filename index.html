@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome Mr. Sam! check this out sir</h2>
+    <h3><button onmousedown="firstlabTask()" style="background-color: aqua">Check for even Number</button></h3>
+    <h3><button onmousedown="factorialize()" style="background-color: rgb(9, 255, 0)">Check to get your factorial</button></h3>
+    <h3><button onmousedown="classSessionA()" style="background-color: rgb(235, 139, 14)">avgSum challenge for yesterday session</button></h3>
+    <h3><button onmousedown="game()" style="background-color: rgb(190, 16, 138)">Guesser game challenge for yesterday session</button></h3>
+
+
+
+    <script>
+function game(){
+    for(i = 0; i < 4; i++){
+    var game = parseInt(prompt("Heyyo! wanna play game, then make a guess of number below"));
+
+    if(game == 4578){
+        alert("That was correct! You are a good guesser");
+        break;
+    }else{
+        alert("Sorry try again")
+    }
+
+    
+}
+}
+function classSessionA(){
+    do{
+    var inputUserName = prompt("Enter your uesrname");
+}while(inputUserName =="");
+
+var totalSum = 0;
+
+for(var i = 0; i < 8; i++){
+    var inputNum = parseInt(prompt(`Enter your score ${i + 1}`));  
+        totalSum += inputNum;
+        
+    }
+    alert(`Total Sum of Input = ${totalSum}`);
+    var avgScore = totalSum / 8;
+    alert(`Total average of num number result is = ${avgScore}`);
+
+}
+
+
+
+
+   function firstlabTask(){
+    var num = parseInt(prompt("Enter number"));
+    var i = 2;
+
+    while(i <= 20 ){
+        num =i++;
+        i ++
+
+        alert(`${num}`);
+    }
+    
+   }
+
+    // var newNum=0;
+    
+// for (var i = 0; i <= 20; i +=2){
+//     var newNum = newNum + i;
+//     document.write(`${newNum}`);
+// }
+// let num  ;
+// $num = parseInt(prompt("input"));
+
+// function factorialize(num) {
+//   var result = num;
+//   if (num === 0 || num === 1) 
+//     return 1; 
+//   while (num > 1) { 
+//     num--;
+//     result *= num;
+//   }
+//   return result;
+// }
+function factorialize(){
+    do{
+    var enterfactorial = parseInt(prompt(`Enter a factorial`));
+} while(enterfactorial !="" && enterfactorial == 0 ){
+
+    var result =1;
+ 
+for (var i =enterfactorial; i > 0; i--){
+    result *= i
+}
+}
+    alert(`${result}`);
+                
+}
+
+
+// var sumNumber= 0;
+// var enterNumber = parseInt(prompt("Enter number for sum up"));
+// if(enterNumber >= 0 && enterNumber >= 50 && enterNumber <=150){
+//     for(var i =enterNumber; i <=5; i++){
+//     sumNumber +=i
+//     }
+// }else{
+//         alert("enter a valid number");
+//     }
+
+// alert(`Total sum = ${sumNumber}`);
+    
+    
+    </script>
+</body>
+</html>
